@@ -1,0 +1,19 @@
+
+input.onButtonPressed(Button.B, () => {    radio.sendNumber(item)})radio.onDataPacketReceived( ({ receivedNumber }) =>  {    basic.showNumber(Coins)})basic.showString("A=Coins")basic.forever(() => {    led.stopAnimation()    basic.clearScreen()    basic.pause(200)    if (Math.random(1) == 0) {        blockchain.addBlock(2)        basic.showIcon(IconNames.Diamond)    } else {        basic.showIcon(IconNames.Asleep)    }}) 
+let item = 0
+let Coins = 0
+input.onButtonPressed(Button.A, () => {
+    led.stopAnimation()
+    Coins = blockchain.valuesFrom(blockchain.id()).length
+    basic.showNumber(Coins)
+})
+input.onButtonPressed(Button.B, () => {
+    radio.sendNumber(item)
+})
+
+
+Find
+No Results
+
+Type a name for your project
+MicroCoin3.8
